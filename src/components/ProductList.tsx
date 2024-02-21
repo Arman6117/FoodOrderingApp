@@ -3,7 +3,7 @@ import { View } from "./Themed";
 import { Image, Pressable, StyleSheet, Text } from "react-native";
 import Colors from "../constants/Colors";
 import { Product } from "../types";
-import { Link } from "expo-router";
+import { Link, Stack, Tabs, useLocalSearchParams } from "expo-router";
 
 type ProductListProps = {
   product: Product;
@@ -12,8 +12,10 @@ const fallbackImage =
   "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/peperoni.png";
 
 const ProductList = ({ product }: ProductListProps) => {
+
   return (
-    <Link href={`/${product.id}`} asChild >
+    <Link href={`/menu/${product.id}`} asChild>
+  
       <Pressable style={styles.container}>
         <Image
           source={{ uri: product?.image || fallbackImage }}

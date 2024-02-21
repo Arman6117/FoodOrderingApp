@@ -1,19 +1,9 @@
-import products from "@/assets/data/products";
-import ProductList from "@/src/components/ProductList";
-import Colors from "@/src/constants/Colors";
-import { FlatList, Image, StyleSheet, Text, View } from "react-native";
+import { View, Text } from 'react-native'
+import React from 'react'
+import { Redirect } from 'expo-router'
 
-export default function TabOneScreen() {
-  // const product = products[0]
+export default function TabIndex() {
   return (
-    <View>
-      <FlatList
-        data={products}
-        renderItem={({ item }) => <ProductList product={item} />}
-        contentContainerStyle={{gap:10 , padding:10}}
-        columnWrapperStyle={{gap:10}}
-        numColumns={2}
-      />
-    </View>
-  );
+   <Redirect href={'/menu/'}/>
+  )
 }
