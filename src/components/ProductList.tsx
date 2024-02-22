@@ -8,7 +8,7 @@ import { Link, Stack, Tabs, useLocalSearchParams } from "expo-router";
 type ProductListProps = {
   product: Product;
 };
-const fallbackImage =
+export const fallbackImage =
   "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/food/peperoni.png";
 
 const ProductList = ({ product }: ProductListProps) => {
